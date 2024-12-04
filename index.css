@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+
+*{
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.overall{
+    min-height: 100vh;
+    width: 100%;
+}
+nav div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+nav div:first-child i{
+    font-size: 40px;
+    color: green;
+    font-weight: bolder;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(255,255,255, 0.5);
+    color: blue;
+    padding: 20px 20px 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+     font-family: "Roboto", sans-serif;
+}
+.subnav{
+    /* border:1px solid white; */
+    position: relative;
+    width: fit-content;
+    display: flex;
+    /* background-color: red; */
+    padding: 5px;
+    font-size: 18px;
+     font-family: "Roboto", sans-serif;
+}
+.subnav a{
+    text-decoration: none;
+    position: relative;
+    /* border:  1px solid white; */
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    font-weight: bolder;
+    margin-right: 10px;
+    color: blue;
+}
+.hover-span{
+    /* border:  1px solid white; */
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+   background-color: lightgreen;
+   left: 5px;
+   z-index: 1;
+   transition: all 1s;
+}
+.subnav>a:nth-child(1):hover~.hover-span{
+    left: 5px;
+}
+.subnav>a:nth-child(2):hover~.hover-span{
+    left: 115px;
+}
+.subnav>a:nth-child(3):hover~.hover-span{
+    left: 225px;
+}
+.subnav>a:nth-child(4):hover~.hover-span{
+    left: 335px;
+}
+.subnav>a:nth-child(5):hover~.hover-span{
+    left: 440px;
+}
+.check:checked~.subnav{
+    position: absolute;
+    left: 0;
+}
+.check,.check+label{
+    display: none;
+}
+/* -------nav bar end-------- */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background:url("./d4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: back;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes back {
+    0%{
+        background: url("./d2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    25%{
+        background: url("./d1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50%{
+        background:url("./d4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    75%{
+        background: url("./d2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background: url("./d1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+}
+
+
+header .head{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    
+}
+header .head h1{
+    font-size: 70px;
+    color: lightgreen;
+    text-shadow: 0px 0px 3px black;
+    /* padding-left: 100px; */
+}
+header .head p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 600px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header .head button{
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    background-color: blue;
+    font-weight: bolder;
+}
+header .head button:hover{
+    transition: all 2s;
+    border-radius: 0px 20px;
+    background-color: green;
+}
+
+
+
+
+
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    /*----nav bar design----  */
+    nav{
+        width: 100%;
+    }
+    .subnav{
+        position: absolute;
+        top:69px ;
+        left: 120%;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-height: 70vh;
+        gap:30px;
+        padding-top: 50px;
+        transition-property: left;
+        transition-duration: 2s;
+    }
+    .hover-span{
+       display: none;
+    }
+    .subnav a:hover{
+        background-image: linear-gradient(45deg,blue,cyan);
+        border-radius: 10px;
+        transition-property: background-color,transform;
+        transition-duration: 2s;
+        transform: scale(1.1);
+    }
+    
+    .check+label{
+        display: block;
+    }
+    /*----nav bar end----  */
+
+    header .head{
+        
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    header .head h1{
+        font-size: 30px;
+    }
+     header .head p{
+        width: 100%;
+        text-align: center;
+     }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:600px) and (max-width:800px) {
+    /* -----nav bar design------  */
+    nav{
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .subnav{
+        position: absolute;
+        top:69px ;
+        left: 120%;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-height: 90vh;
+        gap:30px;
+        padding-top: 50px;
+        transition-property: left;
+        transition-duration: 2s;
+    }
+    .hover-span{
+       display: none;
+    }
+    .subnav a:hover{
+        background-image:linear-gradient(45deg,red,orange) ;
+        border-radius: 10px;
+        transition-property: background-color,transform;
+        transition-duration: 2s;
+        transform: scale(1.1);
+    }
+    
+    .check+label{
+        display: block;
+    }
+    /*--------- nav bar design end-------  */
+}

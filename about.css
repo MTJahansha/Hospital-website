@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+
+*{
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+nav div:first-child i{
+    font-size: 40px;
+    color: red;
+    font-weight: bolder;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:lightblue;
+    color: white;
+    padding: 20px 20px 20px;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+     font-family: "Roboto", sans-serif;
+}
+.subnav{
+    /* border:1px solid white; */
+    position: relative;
+    width: fit-content;
+    display: flex;
+    /* background-color: red; */
+    padding: 5px;
+    font-size: 18px;
+     font-family: "Roboto", sans-serif;
+}
+.subnav a{
+    text-decoration: none;
+    position: relative;
+    /* border:  1px solid white; */
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    font-weight: bolder;
+    margin-right: 10px;
+    color: white;
+}
+.hover-span{
+    /* border:  1px solid white; */
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+   background:linear-gradient(rgb(70, 65, 65),gray);
+   left: 5px;
+   z-index: 1;
+   transition: all 1s;
+}
+.subnav>a:nth-child(1):hover~.hover-span{
+    left: 5px;
+}
+.subnav>a:nth-child(2):hover~.hover-span{
+    left: 115px;
+}
+.subnav>a:nth-child(3):hover~.hover-span{
+    left: 225px;
+}
+.subnav>a:nth-child(4):hover~.hover-span{
+    left: 335px;
+}
+.subnav>a:nth-child(5):hover~.hover-span{
+    left: 440px;
+}
+.check:checked~.subnav{
+    position: absolute;
+    left: 0;
+}
+.check,.check+label{
+    display: none;
+}
+.overall{
+    min-height: 88vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.overall h1{
+    align-self: self-start;
+    font-size: 40px;
+    justify-self: self-start;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+.overall main{
+    width: 70%;
+    background-color: white;
+    min-height: fit-content;
+    box-shadow: 0px 0px 6px black;
+    display: flex;
+}
+main:hover .left{
+    order: 1;
+    transition: all 2s;
+}
+main:hover .right{
+    order: 2;
+    transition: all 2s;
+}
+.center{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 30%;
+    height: 100%;
+    order: 2;
+}
+.left img{
+    width: 100%;
+    height: 100%;
+}
+.right{
+    width: 70%;
+    order: 1;
+    
+    /* border: 2px solid blue; */
+}
+.right p{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    text-align: justify;
+    color:gray
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    min-height: 550px;
+    width: 70%;
+    background: white;
+    box-shadow: 0px 0px 3px black;
+    display: flex;
+}
+.lefter{
+    height: 100%;
+    width: 40%;
+}
+.lefter>img{
+    height: 550px;
+    width: 100%;
+}
+.righter{
+    width: 60%;
+     font-family: "Roboto", sans-serif;
+     padding: 20px;
+}
+.righter h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.righter p{
+    font-size: 17px;
+    line-height: 1.5;
+     font-family: "Roboto", sans-serif;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      gap: 20px;
+    margin-top: 30px;
+}
+.icons i{
+    font-size: 40px;
+    color:green;
+
+}
+.icons h2{
+    margin-bottom: 10px;
+
+}
+.icons p{
+    color: gray;
+}
+.content:hover i{
+    transform: scale(1.2);
+    transition: all 2s;
+
+}
+.lefter img:hover{
+    transform: scale(0.9);
+    transition: all 2s;
+}
+
+
+
+
+
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    /*----nav bar design----  */
+    nav{
+        width: 100%;
+    }
+    .subnav{
+        position: absolute;
+        top:69px ;
+        left: 120%;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-height: 70vh;
+        gap:30px;
+        padding-top: 50px;
+        transition-property: left;
+        transition-duration: 2s;
+    }
+    .hover-span{
+       display: none;
+    }
+    .subnav a:hover{
+        background-image: linear-gradient(45deg,blue,cyan);
+        border-radius: 10px;
+        transition-property: background-color,transform;
+        transition-duration: 2s;
+        transform: scale(1.1);
+    }
+    
+    .check+label{
+        display: block;
+    }
+    /*----nav bar end----  */
+    .overall main{
+        min-height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main .left{
+        width: 100%;
+        order: 1;
+    }
+    main .right{
+        width: 100%;
+        order: 2;
+    }
+
+    section{
+        width: 100%;
+    }
+    .content{
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lefter{
+        width: 100%;
+    }
+    .righter{
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width:600px) and (max-width:800px) {
+    /* -----nav bar design------  */
+    nav{
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .subnav{
+        position: absolute;
+        top:69px ;
+        left: 120%;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-height: 90vh;
+        gap:30px;
+        padding-top: 50px;
+        transition-property: left;
+        transition-duration: 2s;
+    }
+    .hover-span{
+       display: none;
+    }
+    .subnav a:hover{
+        background-image:linear-gradient(45deg,red,orange) ;
+        border-radius: 10px;
+        transition-property: background-color,transform;
+        transition-duration: 2s;
+        transform: scale(1.1);
+    }
+    
+    .check+label{
+        display: block;
+    }
+    /*--------- nav bar design end-------  */
+       .overall main{
+        min-height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main .left{
+        width: 100%;
+        order: 1;
+    }
+    main .right{
+        width: 100%;
+        order: 2;
+    }
+      section{
+        width: 100%;
+    }
+    .content{
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lefter{
+        width: 100%;
+    }
+    .righter{
+        width: 100%;
+    }
+}

@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+
+*{
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+nav div:first-child i{
+    font-size: 40px;
+    color: red;
+    font-weight: bolder;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:lightblue;
+    color: white;
+    padding: 20px 20px 20px;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+     font-family: "Roboto", sans-serif;
+}
+.subnav{
+    /* border:1px solid white; */
+    position: relative;
+    width: fit-content;
+    display: flex;
+    /* background-color: red; */
+    padding: 5px;
+    font-size: 18px;
+     font-family: "Roboto", sans-serif;
+    
+}
+.subnav a{
+    text-decoration: none;
+    position: relative;
+    /* border:  1px solid white; */
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    font-weight: bolder;
+    margin-right: 10px;
+    color: white;
+}
+.hover-span{
+    /* border:  1px solid white; */
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+   background:linear-gradient(rgb(70, 65, 65),gray);
+   left: 5px;
+   z-index: 1;
+   transition: all 1s;
+}
+.subnav>a:nth-child(1):hover~.hover-span{
+    left: 5px;
+}
+.subnav>a:nth-child(2):hover~.hover-span{
+    left: 115px;
+}
+.subnav>a:nth-child(3):hover~.hover-span{
+    left: 225px;
+}
+.subnav>a:nth-child(4):hover~.hover-span{
+    left: 335px;
+}
+.subnav>a:nth-child(5):hover~.hover-span{
+    left: 440px;
+}
+.check:checked~.subnav{
+    position: absolute;
+    left: 0;
+}
+.check,.check+label{
+    display: none;
+}
+
+footer{
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer>.contact{
+    min-height: 500px;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px black;
+    display: flex;
+    padding:30px 0px 30px;
+}
+.contact>.left{
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+}
+.line{
+    margin-top: 50px;
+    background-color: green;
+    width: 2px;
+    height: 400px;
+}
+.left img{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.limg{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.left>h1{
+    color:green;
+}
+.left .center{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+.center p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: gray;
+}
+.center i{
+    font-size: 20px;
+    color: white;
+    background:green;
+    border-radius: 50%;
+    padding: 10px;
+}
+footer .right{
+    width: 70%;
+    height: 100%;
+    padding: 30px;  
+}
+.right h2{
+    color:green;
+    margin-bottom: 20px;
+}
+form{
+    width: 100%;
+}
+form input{
+    margin: 0px 0px 20px;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+form textarea{
+    height: 200px;
+    width: 100%;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+form button{
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+.last{
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    margin: auto;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;   
+}
+.add{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.add i{
+    font-size: 30px;
+    color: orange;
+}
+.last{
+    font-size: 20px;
+}
+.last a{
+    text-decoration: none;
+    color: white;
+}
+.last h2{
+    color: orange;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    /*----nav bar design----  */
+    nav{
+        width: 100%;
+    }
+    .subnav{
+        position: absolute;
+        top:69px ;
+        left: 120%;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-height: 70vh;
+        gap:30px;
+        padding-top: 50px;
+        transition-property: left;
+        transition-duration: 2s;
+    }
+    .hover-span{
+       display: none;
+    }
+    .subnav a:hover{
+        background-image: linear-gradient(45deg,blue,cyan);
+        border-radius: 10px;
+        transition-property: background-color,transform;
+        transition-duration: 2s;
+        transform: scale(1.1);
+    }
+    
+    .check+label{
+        display: block;
+    }
+    /*----nav bar end----  */
+
+    /* ----footer----------  */
+ .line{
+    display: none;
+ }
+ footer{
+    min-height:100%;
+ }
+ .contact{
+    min-width: 100%;
+    flex-direction: column;
+ }
+ .contact .left, .contact .right{
+    width: 100%;
+ }
+
+.last{
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+}
+.cen,.bottom2,.bot1om1{
+    margin-bottom: 30px;
+}
+
+
+
+}
+
+
+
+
+@media only screen and (min-width:600px) and (max-width:800px) {
+    /* -----nav bar design------  */
+    nav{
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .subnav{
+        position: absolute;
+        top:69px ;
+        left: 120%;
+        background-color: black;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        min-height: 90vh;
+        gap:30px;
+        padding-top: 50px;
+        transition-property: left;
+        transition-duration: 2s;
+    }
+    .hover-span{
+       display: none;
+    }
+    .subnav a:hover{
+        background-image:linear-gradient(45deg,red,orange) ;
+        border-radius: 10px;
+        transition-property: background-color,transform;
+        transition-duration: 2s;
+        transform: scale(1.1);
+    }
+    
+    .check+label{
+        display: block;
+    }
+    /*--------- nav bar design end-------  */
+
+    .contact{
+    min-width: 100%;
+}
+.contact .left{
+    width: 55%;
+}
+
+.last{
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.cen,.bottom2,.bot1om1{
+    margin-bottom: 30px;
+}
+
+}
