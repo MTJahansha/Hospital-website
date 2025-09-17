@@ -186,7 +186,7 @@ header .head button:hover{
         width: 100%;
     }
     .subnav{
-        position: fixed;
+        position:fixed;
         top:69px ;
         left: 120%;
         background-color: black;
