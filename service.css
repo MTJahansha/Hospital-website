@@ -172,7 +172,7 @@ nav{
         width: 100%;
     }
     .subnav{
-        position: absolute;
+        position: fixed;
         top:69px ;
         left: 120%;
         background-color: black;
